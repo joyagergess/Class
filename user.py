@@ -32,3 +32,15 @@ class Instructor(User):
 
     def get_teaching_courses(self):
         return self.__teaching_courses
+
+
+
+student = Student("Taha", "taha@student.com")
+student.enroll("Math")
+print(student.get_info())
+print("Enrolled:", student.get_enrolled_courses())
+
+instructor = Instructor("Prof. Taha", "taha@uni.com")
+instructor.add_course("Physics")
+print(instructor.get_info())
+print("Teaching:", instructor.get_teaching_courses())
